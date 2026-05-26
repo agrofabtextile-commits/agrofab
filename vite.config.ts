@@ -5,9 +5,6 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
-    // GitHub Pages repository base path
-    base: '/agrofab/',
-
     plugins: [react(), tailwindcss()],
 
     resolve: {
