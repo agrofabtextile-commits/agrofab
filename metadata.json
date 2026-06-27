@@ -1,6 +1,6 @@
 {
-  "name": "Sustainable Handloom Textiles",
-  "description": "An eco-friendly handloom brand selling textiles made from banana stem, flax stalks, bamboo, and organic cotton with an interactive 'Try On' visualizer for windows and beds.",
-  "requestFramePermissions": ["camera"],
+  "name": "Agrofab",
+  "description": "Sustainable textiles made from agricultural residues like banana stem, flax stalks, and rice straw, empowering women weavers.",
+  "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

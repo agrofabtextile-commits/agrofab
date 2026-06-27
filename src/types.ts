@@ -1,49 +1,38 @@
-export interface Weaver {
+export interface MaterialItem {
   id: string;
   name: string;
-  location: string;
-  district: 'Raipur' | 'Dhamtari' | 'Durg';
-  story: string;
-  specialty: string;
-  yearsOfExperience: number;
-  imageUrl: string;
-}
-
-export interface Fabric {
-  id: string;
-  name: string;
-  source: 'Banana Stem' | 'Flax Stalks' | 'Bamboo' | 'Organic Cotton';
+  source: string;
   description: string;
-  hexValue: string; // fallback color
-  textureUrl: string; // fabric texture swatch URL
-  features: string[];
+  properties: string[];
+  image: string;
 }
 
-export interface Product {
+export interface ApplicationItem {
   id: string;
-  name: string;
-  category: 'bedsheet' | 'pillow_cover' | 'curtain';
-  fibers: ('Banana' | 'Linen' | 'Bamboo' | 'Organic Cotton')[];
-  price: number;
-  rating: number;
-  features: string[];
+  title: string;
   description: string;
-  imageUrl: string;
-  defaultFabricId: string;
+  image: string;
 }
 
-export interface TryOnPreset {
+export interface StructuredFormat {
   id: string;
-  type: 'bed' | 'window';
   name: string;
-  imageUrl: string;
-  // Area defining where the fabric overlay should be placed (normalized coordinates or simple SVG clip path)
-  clipPath: string; 
-  defaultOverlayPosition: {
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-    rotation: number;
-  };
+  extension: string;
+  description: string;
+  content: string;
+}
+
+export interface GraphNode {
+  id: string;
+  label: string;
+  category: 'brand' | 'source' | 'product' | 'social' | 'method';
+  details: string;
+  x: number;
+  y: number;
+}
+
+export interface GraphLink {
+  source: string;
+  target: string;
+  label: string;
 }
